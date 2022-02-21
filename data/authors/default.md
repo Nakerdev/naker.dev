@@ -1,16 +1,15 @@
 ---
-name: Tails Azimuth
+name: Antonio Sánchez
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+occupation: BackEnd Developer
+company: SaludOnNet
+email: antoniojesussg96@gmail.com
+twitter: https://twitter.com/Nakerdev
+linkedin: https://www.linkedin.com/in/antonio-jes%C3%BAs-s%C3%A1nchez-gonz%C3%A1lez-9b1b88121/
+github: https://github.com/nakerdev
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Me empecé a interesar por la tecnología con 14 años cuando por curiosidad busqué tutoriales sobre hacking en Youtube. Me apasionó tanto el tema que decidí, con bastante convicción, que me quería dedicar a la ciberseguridad. De hecho es uno de esos momentos en mi vida de los que tengo un recuerdo muy vívido en mi cabeza.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+No pasó mucho tiempo desde el primer contacto con el mundo de la ciberseguridad hasta que descubrí el desarrollo de software. Por aquel entonces me había registrado en uno de los foros más importantes de ciberseguridad hispanohablantes, Indetectables.net. Naker90 era mi pseudonimo en el foro y le tengo tanto cariño que aún lo mantengo.
+Recuerdo ver con un sentimiento de admiración a los miembros del foro que compartían las herramientas que ellos mismos habían hecho, esto me impactba mucho porque nunca había pensado que todos aquellos programas de escritorio y webs que visitaba las había hecho alguien. Fue ahí donde descargué el primer código fuente que ví, un crypter (PE Packer) escrito en Visual Basic 6 y sin tener ni idea empecé a trastear con él.
