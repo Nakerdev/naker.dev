@@ -2,7 +2,8 @@ const siteMetadata = {
   title: 'Naker.dev',
   author: 'Antonio Sánchez',
   headerTitle: 'Naker.dev',
-  description: 'Web personal de Antonio Sánchez, desarrollador de software.',
+  description:
+    'Web personal de Antonio Sánchez, me defino a mi mismo cómo un desarrollador BackEnd que se lo pasa bien trasteando en el FrontEnd. La experiencia me ha dejado claro que lo que realmente me gusta es desarrollar en el lado del Back ¡y cuanto más tipado mejor!.',
   language: 'es-ES',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
@@ -29,7 +30,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: '',
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
