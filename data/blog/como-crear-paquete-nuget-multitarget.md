@@ -31,9 +31,8 @@ Este archivo de configuración lo puedes definir en dos formatos, la forma clás
 
 El formato clásico usa XML para definir la estructura del archivo y tiene la siguiente pinta:
 
-
 <code>
-<xml version="1.0" encoding="utf-8">
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Pro-ject="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condi-tion="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
