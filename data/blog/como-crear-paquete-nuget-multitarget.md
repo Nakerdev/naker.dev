@@ -32,7 +32,7 @@ Este archivo de configuración lo puedes definir en dos formatos, la forma clás
 El formato clásico usa XML para definir la estructura del archivo y tiene la siguiente pinta:
 
 
-`
+``
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Pro-ject="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condi-tion="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -75,11 +75,11 @@ El formato clásico usa XML para definir la estructura del archivo y tiene la si
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-`
+``
 
 El formato SDK-Style tiene la siguiente pinta:
 
-`
+``
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net462</TargetFrameworks>
@@ -92,7 +92,7 @@ El formato SDK-Style tiene la siguiente pinta:
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
 </Project>
-`
+``
 
 Cómo se puede observar SDK-Style es mucho más limpio y simple ya que aplica un principio de diseño mucho mejor, por defecto todos los archivos del proyecto se incluyen en la compilación a diferencia del estilo clásico donde tienes que especificar explícitamente en el archivo .csproj que archivos conforman tu librería.
 
@@ -115,7 +115,7 @@ Para transformar una librería .NET a un paquete Nuget simplemente hay que inclu
 
 Todas estas nuevas etiquetas las incluiremos dentro de la primera etiqueta PropertyGroup del .csproj.
 
-`
+``
 <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net462;net472;net5.0</TargetFrameworks>
     <PackageId>BusinessName.Common.Utils</PackageId>
@@ -137,7 +137,7 @@ Todas estas nuevas etiquetas las incluiremos dentro de la primera etiqueta Prope
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-`
+``
 
 Nótese que ya en este punto estamos definiendo varias versiones del framework en la etiqueta TargetFrameworks. A la hora de compilar el MSBuild creará el paquete de tal forma que sea compatible para todas las versiones que nosotros le especifiquemos. En este caso: netstandard2.0;net462;net472;net5.0
 
@@ -157,7 +157,7 @@ A la hora de trabajar con paquetes debemos tener en cuenta que no podemos hacer 
 
 Todos los cambios de versión serán reflejados en las etiquetas PackageVersion y FileVersion de nuestro .csproj pero la etiqueta AssemblyVersion solo cambiará cuando subamos de versión principal a nuestro paquete. Ejemplo:
 
-`
+``
 <PackageVersion>1.12.3</PackageVersion>
 <FileVersion>1.12.3.0</FileVersion>
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -165,7 +165,7 @@ Todos los cambios de versión serán reflejados en las etiquetas PackageVersion 
 <PackageVersion>2.0.1</PackageVersion>
 <FileVersion>2.0.1.0</FileVersion>
 <AssemblyVersion>2.0.0.0</AssemblyVersion>
-`
+``
 
 ### Publicación de un paquete.
 
@@ -179,7 +179,7 @@ Obviamente, cuando el proyecto se prepare para su compilación en Release debemo
 
 Una vez el proyecto ha compilado tendremos que ejecutar los siguientes comandos usando la CLI de Nuget.
 
-`
+``
 # Release
 $NUGET_HOME/nuget.exe pack *.csproj -Prop Configuration=Release
 $NUGET_HOME/nuget.exe push *.nupkg User:Pass -Verbosity detailed -Source https://proget.ci /nuget/Release/
@@ -188,7 +188,7 @@ $NUGET_HOME/nuget.exe push *.nupkg User:Pass -Verbosity detailed -Source https:/
 $NUGET_HOME/nuget.exe pack *.csproj -Symbols
 $NUGET_HOME/nuget.exe push *[0-9].nupkg User:Pass -Verbosity detailed -Source https://proget.ci /nuget/Debug /
 $NUGET_HOME/nuget.exe push *.symbols.nupkg User:Pass -Verbosity detailed - https://proget.ci /nuget/Debug /
-`
+``
 
 Listo, ya tendrás tu paquete listo para usar.
 
