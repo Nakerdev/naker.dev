@@ -2,12 +2,11 @@ const siteMetadata = {
   title: 'Naker.dev',
   author: 'Antonio Sánchez',
   headerTitle: 'Naker.dev',
-  description:
-    'Web personal de Antonio Sánchez, me defino a mi mismo cómo un desarrollador BackEnd que se lo pasa bien trasteando en el FrontEnd. La experiencia me ha dejado claro que lo que realmente me gusta es desarrollar en el lado del Back ¡y cuanto más tipado mejor!.',
+  description: 'Software developer buscando combinar la seguridad informática con el desarrollo de software',
   language: 'es-ES',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://naker-dev.vercel.app/',
+  siteRepo: 'https://github.dev/Nakerdev/naker.dev',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
@@ -15,7 +14,7 @@ const siteMetadata = {
   github: 'https://github.com/Nakerdev',
   twitter: 'https://twitter.com/nakerdev',
   facebook: '',
-  youtube: 'https://www.youtube.com/channel/UC2k23VMnWf0ENuVvBpvjTCg/featured',
+  youtube: 'https://www.youtube.com/@nakerdev',
   linkedin: 'https://www.linkedin.com/in/antonio-jes%C3%BAs-s%C3%A1nchez-gonz%C3%A1lez-9b1b88121/',
   locale: 'es-ES',
   analytics: {

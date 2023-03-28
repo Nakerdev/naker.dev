@@ -1,10 +1,9 @@
 ---
 name: Antonio Sánchez
 avatar: /static/images/avatar.png
-occupation: BackEnd Developer
+occupation: Software Developer
 company: SaludOnNet
 email: antoniojesussg96@gmail.com
-twitter: https://twitter.com/Nakerdev
 linkedin: https://www.linkedin.com/in/antonio-jes%C3%BAs-s%C3%A1nchez-gonz%C3%A1lez-9b1b88121/
 github: https://github.com/nakerdev
 ---
@@ -20,4 +19,4 @@ Con 18 años, despúes de terminar la ESO y el ciclo medio de informática, empe
 
 Meses despúes de terminar las prácticas encontré mi primer trabajo gracias a Carlos Blé, quien fue mi mentor en Codesai. Carlos me recomendó junto a mi compañero de prácticas para un puesto de trabajo como desarrollador Junior en una empresa Madrileña, SaludOnNet. Los siguientes dos años fueron increibles profesionalmente, tuve la suerte de aterrizar en una muy buena empresa con gente increible donde crecí muchísimo en muy poco tiempo.
 
-Me defino a mi mismo como un desarrollador BackEnd que se lo pasa bien trasteando en el FrontEnd. La experiencia me ha dejado claro que lo que realmente me gusta es desarrollar en el lado del Back ¡y cuanto más tipado mejor!
+Me defino a mi mismo como un desarrollador de software que trata de combinar la seguridad informática con el desarrollo de software.
