@@ -21,11 +21,11 @@ Este laboratorio es una aplicación web que recibe como parámetro una categorí
 
 Los resultados que se ven en la parte de abajo de la imagen son el resultado de la consulta SQL, probablemente la consulta que se esté haciendo sea algo similar a la siguiente:
 
-''' sql
+```sql
 SELECT title, body
 FROM Table
 WHERE category LIKE ‘Pets’
-'''
+```
 
 El campo _title_ de la consulta sería *Fur Babies* y el _body_ el resto del texto que aparece debajo del titulo.
 
