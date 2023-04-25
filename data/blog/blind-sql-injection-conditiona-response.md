@@ -9,10 +9,11 @@ images: ['/static/images/sqli-conditional-response/blind-sqli-conditional-twitte
 
 ![Query param](/static/images/sqli-conditional-response/blind-sqli-conditional-twitter-card.png)
 
-[Introducción](#introduccion)
-[Concepto del ataque](#concepto)
-[Explotado la vulnerabilidad en el laboratorio](#explotando)  
-[Automatización del ataque](#automatizando)  
+## Tabla de contenidos
+1. [Introducción](#introduccion)
+2. [Concepto del ataque](#concepto)
+3. [Explotado la vulnerabilidad en el laboratorio](#explotando)  
+    3.1 [Automatización del ataque](#automatizando)  
 
 <a name="introduccion"/>
 ## Introducción
