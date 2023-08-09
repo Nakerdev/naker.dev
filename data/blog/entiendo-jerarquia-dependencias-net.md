@@ -3,8 +3,8 @@ title: ¿Por qué tengo que usar BindingRedirect? Entendiendo la jerarquía de d
 date: '2023-08-09'
 tags: ['.NET', 'WEB']
 draft: false
-summary: Aplicando una inyección seremos capaces de hacerle preguntas de respuesta binaria a la base de datos, preguntas que tengan como respuesta un “Sí” o un “No”. Si somos capaces de hacer las preguntas correctas seremos capaces de extraer información de la base de datos aplicando fuerza bruta.
-images: ['/static/images/sqli-conditional-response/blind-sqli-conditional-twitter-card.png']
+summary: Entendiendo la jerarquía de dependecias en .NET y por qué en algunos casos debemos usar BindingRedirect en nuestros proyectos. 
+images: ['/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.png']
 ---
 
 ## Tabla de contenidos
