@@ -4,10 +4,10 @@ date: '2023-08-09'
 tags: ['.NET', 'WEB']
 draft: false
 summary: Entendiendo la jerarquía de dependecias en .NET y por qué en algunos casos debemos usar BindingRedirect en nuestros proyectos. 
-images: ['/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.png']
+images: ['/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.PNG']
 ---
 
-![Query param](/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.png)
+![Query param](/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.PNG)
 
 ## Tabla de contenidos
 1. [Introducción](#introduccion)
@@ -56,17 +56,17 @@ Para evitar que estos errores lleguen a producción la mejor opción es tener en
 
 Tenemos el siguiente escenario: Una aplicación web que depende de una librería, por ejemplo, de la librería *ServiceStack*.
 
-![Query param](/static/images/jerarquia-dependencias-net/1.png)
+![Query param](/static/images/jerarquia-dependencias-net/1.PNG)
 
 El momento en el que compilamos el proyecto, el compilador generará la carpeta *bin/* de la aplicación en la cual se encontrará el ejecutable de nuestra aplicación web y la DLL de nuestra dependencia *ServiceStack@6.0.10*. Hasta aquí todo bien, pero debemos saber que ServiceStack también depende de muchas otras dependencias por lo que en nuestra carpeta *bin/* no solo contendrá las dependencias directas de nuestra aplicación sino también todas aquellas dependencias de nuestras dependencias. La foto quedaría más bien así:
 
-![Query param](/static/images/jerarquia-dependencias-net/2.png)
+![Query param](/static/images/jerarquia-dependencias-net/2.PNG)
 
 El árbol de dependencias sería tan grande como dependencias tuvieran nuestras dependencias directas.
 
 ¡Ahora! Qué pasaría si nuestra aplicación necesita depender directamente de *System.Runtime.CompilerService.Unsafe*. Si nos fijamos en la imagen anterior, esa dependecia, es a su vez una subdependencia de *ServiceStack*. La foto quedaría así:
 
-![Query param](/static/images/jerarquia-dependencias-net/3.png)
+![Query param](/static/images/jerarquia-dependencias-net/3.PNG)
 
 Aquí debemos empezar a diferencias los diferentes niveles, las depenecias directas de nuestra aplicación quedaría en el primer nivel de la jerarquía y las dependencias de nuestras dependencias quedarían en un segundo nivel de la jerarquía. Aquí empiezan los problemas...
 
