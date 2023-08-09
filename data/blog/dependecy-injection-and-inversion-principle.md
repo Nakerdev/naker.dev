@@ -174,6 +174,6 @@ Gracias por leer, un saludo.
 Referencias:
 
 - Libro Clean Architecture de Robert C. Martin.
-- [Principio de inversión de dependecias, CodelyTv](https://codely.tv/blog/screencasts/solid-principio-inversion-dependencias/)
+- [Principio de inversión de dependencias, CodelyTv](https://codely.tv/blog/screencasts/solid-principio-inversion-dependencias/)
 - [Wikipedia](https://es.wikipedia.org/wiki/Abstracci%C3%B3n_%28inform%C3%A1tica%29)
 - [https://www.globetesting.com/glosario/testabilidad/ ](https://www.globetesting.com/glosario/testabilidad/)
