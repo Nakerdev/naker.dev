@@ -7,8 +7,6 @@ summary: Entendiendo la jerarquía de dependecias en .NET y por qué en algunos 
 images: ['/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.png']
 ---
 
-![Query param](/static/images/sqli-conditional-response/blind-sqli-conditional-twitter-card.png)
-
 ![Query param](/static/images/jerarquia-dependencias-net/binding-redirect-twitter-card.png)
 
 ## Tabla de contenidos
