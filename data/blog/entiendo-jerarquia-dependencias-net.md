@@ -12,8 +12,8 @@ images: ['/static/images/jerarquia-dependencias-net/binding-redirect-twitter-car
 2. [Las desgracias siempre en producción... Gracias GAC.](#gracias-gac)
 3. [La raíz del problema, la jerarquía de dependencias](#jerarquia)
 4. [Solución del problema](#solucion)
-    4.1 [El BindingRedirect](#binding)
-    4.2 [Igualar versiones de dependencias](#igualar)
+    1. [El BindingRedirect](#binding)
+    2. [Igualar versiones de dependencias](#igualar)
 5. [Conclusión](#conclusion)
 
 <a name="introduccion"/>
