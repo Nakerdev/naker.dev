@@ -58,14 +58,11 @@ export default function Projects() {
               Leidos:
             </h2>
             <div>
-              {
-                readedBooks.map((book, index) => {
-                  return (
-                    <p key={index} className="text-gray-500 dark:text-gray-400">
-                      {book}
-                    </p>)
-                })
-              }
+              {readedBooks.map((book, index) => (
+                <p key={index} className="text-gray-500 dark:text-gray-400">
+                  {book}
+                </p>
+              ))}
             </div>
           </div>
           <div className="mt-3">
@@ -73,14 +70,11 @@ export default function Projects() {
               Me gustaría leer:
             </h2>
             <div>
-              {
-                wannaReadBooks.map((book, index) => {
-                  return (
-                    <p key={index} className="text-gray-500 dark:text-gray-400">
-                      {book}
-                    </p>)
-                })
-              }
+              {wannaReadBooks.map((book, index) => (
+                <p key={index} className="text-gray-500 dark:text-gray-400">
+                  {book}
+                </p>
+              ))}
             </div>
           </div>
         </div>
