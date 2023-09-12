@@ -51,9 +51,7 @@ export default function Projects() {
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Leyendo actualmente:
             </h2>
-            <p className="xl text-gray-500 dark:text-gray-400">
-              Código sostenible, Carlos Blé
-            </p>
+            <p className="xl text-gray-500 dark:text-gray-400">Código sostenible, Carlos Blé</p>
           </div>
           <div className="mt-3">
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
