@@ -48,37 +48,25 @@ export default function Projects() {
         </div>
         <div className="container py-12">
           <div className="mt-3">
-            <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-5xl md:leading-14">
+            <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Leyendo actualmente:
             </h2>
-            <h3 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-              Código sostenible, Carlos Blé
-            </h3>
+            <p className="text-gray-500 dark:text-gray-400">Código sostenible, Carlos Blé</p>
           </div>
           <div className="mt-3">
-            <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-5xl md:leading-14">
+            <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Leidos:
             </h2>
             {readedBooks.map((book, index) => (
-              <h3
-                key={index}
-                className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14"
-              >
-                {book}
-              </h3>
+              <p key={index} className="text-gray-500 dark:text-gray-400">{book}</p>
             ))}
           </div>
           <div className="mt-3">
-            <h2 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-5xl md:leading-14">
+            <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Me gustaría leer:
             </h2>
             {wannaReadBooks.map((book, index) => (
-              <h3
-                key={index}
-                className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14"
-              >
-                {book}
-              </h3>
+              <p key={index} className="text-gray-500 dark:text-gray-400">{book}</p>
             ))}
           </div>
         </div>
