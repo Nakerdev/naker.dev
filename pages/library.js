@@ -59,7 +59,7 @@ export default function Projects() {
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Leidos:
             </h2>
-            <ul className="list-disc">
+            <ul className="my-5 list-disc">
               {readedBooks.map((book, index) => (
                 <li key={index} className="text-xl text-gray-500 dark:text-gray-400">
                   {book}
@@ -71,13 +71,13 @@ export default function Projects() {
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Me gustaría leer:
             </h2>
-            <div>
+            <ul className="my-5 list-disc">
               {wannaReadBooks.map((book, index) => (
-                <p key={index} className="text-xl text-gray-500 dark:text-gray-400">
+                <li key={index} className="text-xl text-gray-500 dark:text-gray-400">
                   {book}
-                </p>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
