@@ -10,15 +10,16 @@ images: ['/static/images/sqli-conditional-response/blind-sqli-conditional-twitte
 ![Query param](/static/images/sqli-conditional-response/blind-sqli-conditional-twitter-card.png)
 
 ## Tabla de contenidos
+
 1. [Introducción](#introduccion)
 2. [Concepto del ataque](#concepto)
 3. [Explotado la vulnerabilidad en el laboratorio](#explotando)  
-    3.1 [Automatización del ataque](#automatizando)  
+   3.1 [Automatización del ataque](#automatizando)
 
 <a name="introduccion"/>
 ## Introducción
 
-En este articulo veremos como explotar un SQL Injection (SQLi) a ciegas, el hecho de que sea a ciegas significa que no podremos visualizar directamente datos en la página web, como sí lo hacíamos con el SQLi UNION Attack. Hay varios tipos de inyecciones a ciegas, en este caso, vamos a estar explotando una inyección de respuesta condicional. 
+En este articulo veremos como explotar un SQL Injection (SQLi) a ciegas, el hecho de que sea a ciegas significa que no podremos visualizar directamente datos en la página web, como sí lo hacíamos con el SQLi UNION Attack. Hay varios tipos de inyecciones a ciegas, en este caso, vamos a estar explotando una inyección de respuesta condicional.
 
 Antes de seguir leyendo, si nunca antes has explotado un SQLi UNION Attack ([https://naker-dev.vercel.app/blog/sql-injection-union-attack](https://naker-dev.vercel.app/blog/sql-injection-union-attack)) te recomiendo que empieces por ahí ya que entenderás mejor las inyecciones a ciegas.
 
@@ -27,18 +28,18 @@ Para hacer más visual el articulo usaremos uno de los laboratorios de PortSwigg
 <a name="concepto"/>
 ## Concepto del ataque
 
-En muchas ocasiones la inyección SQL no reflejará los datos de la BD en la página web, ni tampoco romperá la ejecución de la web (un error 500), simplemente la aplicación se comportará de forma diferente en función de si la consulta que inyectemos se resuelve como verdadera o como falsa. De ahí el nombre de inyección de respuesta condicional. 
+En muchas ocasiones la inyección SQL no reflejará los datos de la BD en la página web, ni tampoco romperá la ejecución de la web (un error 500), simplemente la aplicación se comportará de forma diferente en función de si la consulta que inyectemos se resuelve como verdadera o como falsa. De ahí el nombre de inyección de respuesta condicional.
 
 Aplicando una inyección seremos capaces de hacerle preguntas de respuesta binaria a la base de datos, preguntas que tengan como respuesta un “Sí” o un “No”. Si somos capaces de hacer las preguntas correctas seremos capaces de extraer información de la base de datos aplicando fuerza bruta.
 
-Como ejemplo ilustrativo, podríamos preguntarle a la BD: *¿La contraseña del usuario ‘administrator’ empieza por la letra ‘a’?* En caso de que la respuesta sea afirmativa ya sabríamos la primera letra de la contraseña, de forma iterativa podríamos seguir preguntando por el resto de posiciones hasta finalmente obtener la contraseña completa.
+Como ejemplo ilustrativo, podríamos preguntarle a la BD: _¿La contraseña del usuario ‘administrator’ empieza por la letra ‘a’?_ En caso de que la respuesta sea afirmativa ya sabríamos la primera letra de la contraseña, de forma iterativa podríamos seguir preguntando por el resto de posiciones hasta finalmente obtener la contraseña completa.
 
-La forma en la que veremos la respuesta de la BD (si la respuesta es “Sí” o “No”) pueden ser varías: 
+La forma en la que veremos la respuesta de la BD (si la respuesta es “Sí” o “No”) pueden ser varías:
 
 - Renderizar o no un texto en la web
 - Renderizar o no una sección entera (la cabecera, el píe de la web, el menú de usuario, etc)
 - Cargar o no una cookie
-- Guardar o no una clave en el *localStorage/sessionStorage*
+- Guardar o no una clave en el _localStorage/sessionStorage_
 - …
 
 La forma de poder determinar si la respuesta a la inyección es un “Sí” o un “No” pueden ser varías y a cada caso diferente, deberemos indagar manualmente para poder determinar que comportamiento de la web nos dará la respuesta de la inyección. En el ejemplo que explotaremos posteriormente quedará más claro este concepto.
@@ -48,7 +49,7 @@ La forma de poder determinar si la respuesta a la inyección es un “Sí” o u
 
 Previa explotación, debemos saber que el laboratorio nos da la estructura de las tablas de la BD para no tener que sacarlas por fuerza bruta. Sabemos que existe una tabla llamada `Users` que contiene un usuario llamado `adminitrator`. Toda está información podríamos extraerla nosotros mismos pero nos llevaría bastante tiempo.
 
-La inyección en este caso la haremos sobre un campo de la *cookie.* El campo *trackingId* es vulnerable a SQLi. 
+La inyección en este caso la haremos sobre un campo de la _cookie._ El campo _trackingId_ es vulnerable a SQLi.
 
 Si nos fijamos en la web veremos un texto: “Welcome back!”:
 
@@ -70,13 +71,13 @@ En caso de inyectar una consulta que se resuelva como falsa dejaremos de ver el 
 
 ¡Hemos encontrado una forma de interpretar las respuestas “Sí”/“No” por parte de nuestra BD!
 
-Teniendo en cuenta que el objetivo del laboratorio es extraer la contraseña del usuario `administrator` podemos generar un *payload* para inyección SQL que le pregunte a la BD algo como *¿La contraseña del usuario ‘administrator’ empieza por la letra ‘a’?*
+Teniendo en cuenta que el objetivo del laboratorio es extraer la contraseña del usuario `administrator` podemos generar un _payload_ para inyección SQL que le pregunte a la BD algo como _¿La contraseña del usuario ‘administrator’ empieza por la letra ‘a’?_
 
 La sentencia SQL a inyectar quedaría algo así:
 
 `n2fI6yGTKRibLzj8' AND (SELECT substring(password, 1, 1) FROM users WHERE username LIKE 'administrator') = 'a' -- -`
 
-En caso de que la respuesta se resuelva como afirmativa veremos el texto “Welcome back!” en la pantalla, de lo contrario no lo veremos. De esta forma somos capaces de terminar de qué caracteres se compone la contraseña, iterando por cada posición del campo. 
+En caso de que la respuesta se resuelva como afirmativa veremos el texto “Welcome back!” en la pantalla, de lo contrario no lo veremos. De esta forma somos capaces de terminar de qué caracteres se compone la contraseña, iterando por cada posición del campo.
 
 **Hay que tener en cuenta que estamos haciendo las pruebas sobre una BD PostgreSQL, por eso usamos la función `substring` para extraer un carácter de una posición concreta del campo. En caso de ser otro motor de BD habría que adaptar esta parte de la consulta.**
 
@@ -91,7 +92,7 @@ El script en este caso lo he hecho en Python:
 import requests
 import string
 
-dictionary = string.ascii_lowercase + string.digits #[a-z0-9] 
+dictionary = string.ascii_lowercase + string.digits #[a-z0-9]
 url = "https://0a4400f7035bc8938449ae2700620002.web-security-academy.net/filter?category=Gifts"
 trackingId = "UXenCJxCQPYRW0EV"
 session = "BHLKJiOKcd68WYjIyaXpzlTPMNdTPnnh"

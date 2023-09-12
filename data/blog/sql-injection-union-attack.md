@@ -7,13 +7,13 @@ summary: El fin de este ataque es aprovechar algún elemento de la página web q
 images: ['/static/images/sqli-union-attack/twitter-card.png']
 ---
 
-El fin de este ataque es aprovechar algún elemento de la página web que esté renderizando información que llega directamente de la BD para extraer información. Si la aplicación es vulnerable a SQL Injection (SQLi) y somos capaces de determinar cuantas columnas está devolviendo la consulta SQL original podremos utilizar la palabra reservada *UNION* de SQL para concatenar en la salida de la consulta información extra de otras tablas de la base de datos.
+El fin de este ataque es aprovechar algún elemento de la página web que esté renderizando información que llega directamente de la BD para extraer información. Si la aplicación es vulnerable a SQL Injection (SQLi) y somos capaces de determinar cuantas columnas está devolviendo la consulta SQL original podremos utilizar la palabra reservada _UNION_ de SQL para concatenar en la salida de la consulta información extra de otras tablas de la base de datos.
 
 Doy por hecho que el lector tiene conocimientos sobre lo que es un SQLi, conocimientos básicos de como funciona el ataque y conocimientos básicos de SQL.
 
-Las siguientes explicaciones se basarán en la idea de que tenemos una aplicación web la cual recibe como un parámetro en la url un valor que se utiliza para filtrar en una consulta SQL. Para hacer el post mas visual usaremos los laboratorios de [https://portswigger.net/](https://portswigger.net/) en concreto el laboratorio ****Lab: SQL injection attack, listing the database contents on non-Oracle databases.****
+Las siguientes explicaciones se basarán en la idea de que tenemos una aplicación web la cual recibe como un parámetro en la url un valor que se utiliza para filtrar en una consulta SQL. Para hacer el post mas visual usaremos los laboratorios de [https://portswigger.net/](https://portswigger.net/) en concreto el laboratorio \***\*Lab: SQL injection attack, listing the database contents on non-Oracle databases.\*\***
 
-Importante recalcar que el laboratorio es una BD non-Oracle, para Oracle las consultas cambiarían un poco ya que siempre se necesita que se especifique una tabla en la consulta. Para ello se usa la tabla *Dual* (`[sqli] from Dual — -`) 
+Importante recalcar que el laboratorio es una BD non-Oracle, para Oracle las consultas cambiarían un poco ya que siempre se necesita que se especifique una tabla en la consulta. Para ello se usa la tabla _Dual_ (`[sqli] from Dual — -`)
 
 Este laboratorio es una aplicación web que recibe como parámetro una categoría que se usa para filtrar los resultados de la página.
 
@@ -27,7 +27,7 @@ FROM Table
 WHERE category LIKE ‘Pets’
 ```
 
-El campo _title_ de la consulta sería *Fur Babies* y el _body_ el resto del texto que aparece debajo del titulo.
+El campo _title_ de la consulta sería _Fur Babies_ y el _body_ el resto del texto que aparece debajo del titulo.
 
 ## Enumerar la cantidad de columnas de la consulta original.
 
@@ -67,7 +67,7 @@ En caso de que por ejemplo, la segunda columna sea de tipo numérico la aplicaci
 
 En caso de que solo una de los campos nos permita extraer texto y queramos extraer información de más de una columna podemos jugar con la función `concat()` para mostrar N columnas sobre un mismo campo:
 
-`/filter?category=Pets' UNION SELECT concat(version(), ':',``current_database()), NULL -- -`
+` /filter?category=Pets' UNION SELECT concat(version(), ':',``current_database()), NULL -- - `
 
 En la consulta anterior nos aparecería la versión de la BD junto con el nombre de la base de datos actual separado por el delimitador “:”. No todos los motores de BD tienen el método `concat()` pero todos ellos nos permite extrapolar cadenas de una forma u otra. La cheatsheet que nombre anteriormente tiene también diferentes formas de concatenar datos en función del motor de BD.
 
@@ -93,13 +93,13 @@ Una vez conocemos la BD es hora de conocer las tablas que contiene, una vez más
 
 ![Enumeracion de tablas](/static/images/sqli-union-attack/3.png)
 
-Vemos que la BD *public* contiene dos tablas, *products* y *users_dcpwdo.* Como el fin del laboratorio es extraer las credenciales del usuario administrador vamos a por la tabla de usuarios. Lo único que nos falta por saber para poder extraer la información de esta tabla son las columnas que contiene.
+Vemos que la BD _public_ contiene dos tablas, _products_ y _users_dcpwdo._ Como el fin del laboratorio es extraer las credenciales del usuario administrador vamos a por la tabla de usuarios. Lo único que nos falta por saber para poder extraer la información de esta tabla son las columnas que contiene.
 
 `/filter?category=Accessories' UNION SELECT column_name, NULL FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name LIKE 'users_dcpwdo' -- -`
 
 ![Enumeracion de columnas](/static/images/sqli-union-attack/4.png)
 
-Enumeramos dos columnas en la tabla: *password_gwmnts* y *username_jxwprc.* Con esta información solo queda hacer una consulta normal a la tabla y extraer la información.
+Enumeramos dos columnas en la tabla: _password_gwmnts_ y _username_jxwprc._ Con esta información solo queda hacer una consulta normal a la tabla y extraer la información.
 
 `/filter?category=Accessories' UNION SELECT username_jxwprc, password_gwmnts FROM users_dcpwdo -- -`
 
