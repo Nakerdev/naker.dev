@@ -59,7 +59,10 @@ export default function Projects() {
             </h2>
             {
               readedBooks.map((book, index) => {
-                return (<p key={index} className="text-gray-500 dark:text-gray-400">{book}</p>)
+                return (
+                  <p key={index} className="text-gray-500 dark:text-gray-400">
+                    {book}
+                  </p>)
               })
             }
           </div>
@@ -69,7 +72,10 @@ export default function Projects() {
             </h2>
             {
               wannaReadBooks.map((book, index) => {
-                return (<p key={index} className="text-gray-500 dark:text-gray-400">{book}</p>)
+                return (
+                  <p key={index} className="text-gray-500 dark:text-gray-400">
+                    {book}
+                  </p>)
               })
             }
           </div>
