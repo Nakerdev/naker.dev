@@ -57,17 +57,11 @@ export default function Projects() {
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Leidos:
             </h2>
-            <p className="text-gray-500 dark:text-gray-400">
-              Sorry we couldn't find this page.
-            </p>
           </div>
           <div className="mt-3">
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Me gustaría leer:
             </h2>
-            <p className="text-gray-500 dark:text-gray-400">
-              Sorry we couldn't find this page.
-            </p>
           </div>
         </div>
       </div>
