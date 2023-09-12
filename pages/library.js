@@ -57,27 +57,31 @@ export default function Projects() {
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Leidos:
             </h2>
-            {
-              readedBooks.map((book, index) => {
-                return (
-                  <p key={index} className="text-gray-500 dark:text-gray-400">
-                    {book}
-                  </p>)
-              })
-            }
+            <div>
+              {
+                readedBooks.map((book, index) => {
+                  return (
+                    <p key={index} className="text-gray-500 dark:text-gray-400">
+                      {book}
+                    </p>)
+                })
+              }
+            </div>
           </div>
           <div className="mt-3">
             <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
               Me gustaría leer:
             </h2>
-            {
-              wannaReadBooks.map((book, index) => {
-                return (
-                  <p key={index} className="text-gray-500 dark:text-gray-400">
-                    {book}
-                  </p>)
-              })
-            }
+            <div>
+              {
+                wannaReadBooks.map((book, index) => {
+                  return (
+                    <p key={index} className="text-gray-500 dark:text-gray-400">
+                      {book}
+                    </p>)
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
