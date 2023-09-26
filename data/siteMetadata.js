@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Naker.dev',
   author: 'Antonio Sánchez',
   headerTitle: 'Naker.dev',
-  description: 'Blog personal sobre desarrollo de software y seguridad web',
+  description: 'Blog personal sobre diseño y desarrollo de software',
   language: 'es-ES',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://naker-dev.vercel.app/',
