@@ -7,11 +7,11 @@ const readedBooks = [
   'Thinking functionally',
   'Clean architecture - Robert C. Martin',
   'Agile Retrospectives',
+  'The Pragmatic Programmer by Dave Thomas and Andy Hunt',
+  'Código sostenible, Carlos Blé'
 ]
 
 const wannaReadBooks = [
-  'The Pragmatic Programmer by Dave Thomas and Andy Hunt',
-  'Practical Object-Oriented Design in Ruby by Sandi Metz',
   'Secure By Design',
   'Microservices Patterns (Chris Richardson)',
   'cqrs by example',
@@ -52,7 +52,7 @@ export default function Projects() {
               Leyendo actualmente:
             </h2>
             <p className="text-xl text-gray-500 dark:text-gray-400">
-              Código sostenible, Carlos Blé
+              Practical Object-Oriented Design in Ruby by Sandi Metz
             </p>
           </div>
           <div className="mt-3">
