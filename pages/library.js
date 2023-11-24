@@ -8,7 +8,7 @@ const readedBooks = [
   'Clean architecture - Robert C. Martin',
   'Agile Retrospectives',
   'The Pragmatic Programmer by Dave Thomas and Andy Hunt',
-  'Código sostenible, Carlos Blé'
+  'Código sostenible, Carlos Blé',
 ]
 
 const wannaReadBooks = [
