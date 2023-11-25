@@ -100,7 +100,7 @@ Una vez configurada la máquina sobre la que vamos a trabajar el siguiente paso 
 
 **Importante: A partir de este punto, hasta finalizar la instalación no eliminar el contenedor (docker-compose down) porque perderemos el estado de la máquina.**
 
-El comando para conectarnos al contenedor es el siguiente: *docker compose exec {service_name} bash*
+El comando para conectarnos al contenedor es el siguiente: *docker compose exec \{service_name\} bash*
 
 Importante, hay que recalcar que **hay que pasarle el nombre del servicio no el nombre del contenedor.** El nombre del servicio lo hemos definido en el *docker-compose.yml*
 
