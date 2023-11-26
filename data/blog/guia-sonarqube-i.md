@@ -1,7 +1,7 @@
 ---
 title: 'SonarQube: Una Guía completa desde la instalación hasta el análisis de código (I)'
 date: '2023-11-25'
-tags: ['.NET', 'CI', 'WEB']
+tags: ['.NET', 'CI', 'WEB', 'LINUX']
 draft: false
 summary: El primer articulo de una serie de SonarQube que va desde la instalación y configuración hasta el análisis de código de un proyecto en .NET.
 images: ['/static/images/sonarqube-guia-i/sonarqube-guia-1-twitter-card.png']
