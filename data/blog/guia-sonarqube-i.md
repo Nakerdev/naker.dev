@@ -212,7 +212,7 @@ En mi caso he instalado *vim* para poder editar los archivos en la máquina.
 ![Query param](/static/images/sonarqube-guia-i/sonar-escaner-config.PNG)
 
 <a name="acceso-web"/>
-## Descarga e instalación de SonarQube
+## Acceso a la interfaz web
 
 Llegados a este punto podemos acceder a la interfaz web de SonarQube desde nuestro navegador local accediendo a la URL [http://127.0.0.1:9000]
 
