@@ -36,6 +36,9 @@ const wannaReadBooks = [
   'Accelerate — Building and Scaling High Performing Technology Organizations',
   'The Cucumber Book: Behaviour-Driven Development for Testers and Developers',
   'Drive: The Surprising Truth About What Motivates Us',
+  'Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation',
+  'The Manager`s Path: A Guide for Tech Leaders Navigating Growth and Change',
+  'The Five Dysfunctions of a Team: A Leadership Fable',
 ]
 
 export default function Projects() {
