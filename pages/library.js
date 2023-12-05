@@ -14,7 +14,7 @@ const readedBooks = [
 const wannaReadBooks = [
   'Secure By Design',
   'Microservices Patterns (Chris Richardson)',
-  'cqrs by example',
+  'CQRS by example',
   'Cracking the coding interview',
   'Compiladores.Principios, Ténicas Y Herramientas',
   'Isomorphic Web Applications',
@@ -35,6 +35,7 @@ const wannaReadBooks = [
   'Teoría de grafos. Ejercicios y problemas resueltos.',
   'Accelerate — Building and Scaling High Performing Technology Organizations',
   'The Cucumber Book: Behaviour-Driven Development for Testers and Developers',
+  'Drive: The Surprising Truth About What Motivates Us',
 ]
 
 export default function Projects() {
