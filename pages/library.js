@@ -39,6 +39,8 @@ const wannaReadBooks = [
   'Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation',
   'The Manager`s Path: A Guide for Tech Leaders Navigating Growth and Change',
   'The Five Dysfunctions of a Team: A Leadership Fable',
+  'EL HOMBRE EN BUSCA DE SENTIDO',
+  'Un libro de la sabiduría tolteca',
 ]
 
 export default function Projects() {
