@@ -41,6 +41,7 @@ const wannaReadBooks = [
   'The Five Dysfunctions of a Team: A Leadership Fable',
   'EL HOMBRE EN BUSCA DE SENTIDO',
   'Un libro de la sabiduría tolteca',
+  'Deep Work. Rules For Focused Success In A Distracted World',
 ]
 
 export default function Projects() {
