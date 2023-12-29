@@ -42,6 +42,7 @@ const wannaReadBooks = [
   'EL HOMBRE EN BUSCA DE SENTIDO',
   'Un libro de la sabiduría tolteca',
   'Deep Work. Rules For Focused Success In A Distracted World',
+  'Invicto: Logra Más, Sufre Menos',
 ]
 
 export default function Projects() {
