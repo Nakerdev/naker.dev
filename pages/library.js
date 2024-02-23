@@ -12,6 +12,7 @@ const readedBooks = [
 ]
 
 const wannaReadBooks = [
+  'Cryptography in C and C++, Second Edition',
   'Secure By Design',
   'Microservices Patterns (Chris Richardson)',
   'CQRS by example',
