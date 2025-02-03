@@ -9,6 +9,7 @@ const readedBooks = [
   'Agile Retrospectives',
   'The Pragmatic Programmer by Dave Thomas and Andy Hunt',
   'Código sostenible, Carlos Blé',
+  'Practical Object-Oriented Design in Ruby by Sandi Metz',
 ]
 
 const wannaReadBooks = [
@@ -61,7 +62,7 @@ export default function Projects() {
               Leyendo actualmente:
             </h2>
             <p className="text-xl text-gray-500 dark:text-gray-400">
-              Practical Object-Oriented Design in Ruby by Sandi Metz
+              Implementing Domain-Driven Design - Vernon Vaughn
             </p>
           </div>
           <div className="mt-3">
