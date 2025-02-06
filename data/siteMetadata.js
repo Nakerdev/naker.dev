@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.dev/Nakerdev/naker.dev',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/og-image.png',
   email: 'antoniojesussg96@gmail.com',
   github: 'https://github.com/Nakerdev',
   twitter: 'https://twitter.com/nakerdev',
