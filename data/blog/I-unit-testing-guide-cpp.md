@@ -1,6 +1,6 @@
 ---
 title: 'I. Unit Testing Guide in C++: Essential Foundations'
-date: '2025-01-03'
+date: '2025-02-03'
 tags: ['C++', 'Testing']
 draft: false
 summary: 'Polymorphism is necessary for unit testing. Polymorphism combined with dependency injection allows us to perform unit tests on an artifact that depends on others without being tightly coupled to the real implementations of its dependencies.'

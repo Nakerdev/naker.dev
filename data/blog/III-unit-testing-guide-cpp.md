@@ -1,6 +1,6 @@
 ---
 title: 'III. Unit Testing Guide in C++: Reports and CI Integration'
-date: '2025-01-06'
+date: '2025-02-06'
 tags: ['C++', 'Testing']
 draft: false
 summary: 'We will discuss how we can integrate our unit tests into our continuous integration environment, undoubtedly an essential aspect for a development team composed of multiple people.'

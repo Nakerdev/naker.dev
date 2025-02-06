@@ -1,6 +1,6 @@
 ---
 title: 'II. Unit Testing Guide in C++: GTest as Testing Framework'
-date: '2025-01-05'
+date: '2025-02-05'
 tags: ['C++', 'Testing']
 draft: false
 summary: 'This article explains why I consider GoogleTests to be the best unit testing framework for C++ projects and some considerations to keep in mind before embarking on the journey of creating unit tests with it.'
